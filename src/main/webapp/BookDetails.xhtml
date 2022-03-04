@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<body>
+
+<div style="width: 100%; font-size: 36px; line-height: 48px; background-color: cornflowerblue; color: white">Form Book</div>
+<h:form id="formBookDetails">
+    <h:panelGrid border="1" columns="2">
+        <f:facet name="header">
+            <h:outputText value="Book Details"></h:outputText>
+        </f:facet>
+        <h:outputText value="Navigation"></h:outputText>
+        <h:panelGrid border="1" columns="2">
+            <h:commandButton value="Previous" actionListener="#{formBooks.previousBook}"></h:commandButton>
+            <h:commandButton value="Next" actionListener="#{formBooks.nextBook}"></h:commandButton>
+        </h:panelGrid>
+        <h:outputText value="Id Book"></h:outputText>
+        <h:inputText value="#{formBooks.bookDetails.id}"></h:inputText>
+        <h:outputText value="Author Name"></h:outputText>
+        <h:inputText value="#{formBooks.bookDetails.authorName}"></h:inputText>
+        <h:outputText value="Name Book"></h:outputText>
+        <h:inputText value="#{formBooks.bookDetails.bookName}"></h:inputText>
+        <h:outputText value="Price book"></h:outputText>
+        <h:inputText value="#{formBooks.bookDetails.price}"></h:inputText>
+        <h:outputText value="Number Book"></h:outputText>
+        <h:inputText value="#{formBooks.bookDetails.bookNumber}"></h:inputText>
+        <h:outputText value="Book Status"></h:outputText>
+        <h:inputText value="#{formBooks.bookDetails.status}"></h:inputText>
+    </h:panelGrid>
+    <h:panelGrid border="1" columns="4">
+        <h:commandButton value="Add Book" actionListener="#{formBooks.addBook}"></h:commandButton>
+        <h:commandButton value="Save Book" actionListener="#{formBooks.saveBook}"></h:commandButton>
+        <h:commandButton value="Abandon Book" actionListener="#{formBooks.abandonBook}"></h:commandButton>
+        <h:commandButton value="Delete Book" actionListener="#{formBooks.deleteBook}"></h:commandButton>
+    </h:panelGrid>
+</h:form>
+</body>
+</html>

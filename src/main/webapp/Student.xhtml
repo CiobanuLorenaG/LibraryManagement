@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<body>
+
+<div style="width: 100%; font-size: 36px; line-height: 48px; background-color: cornflowerblue; color: white">Form Student</div>
+<h:form id="formStudentDetails">
+    <h:panelGrid border="1" columns="2">
+        <f:facet name="header">
+            <h:outputText value="Student Details"></h:outputText>
+        </f:facet>
+        <h:outputText value="Navigation"></h:outputText>
+        <h:panelGrid border="1" columns="2">
+            <h:commandButton value="Previous" actionListener="#{formStudent.previousStudent}"></h:commandButton>
+            <h:commandButton value="Next" actionListener="#{formStudent.nextStudent}"></h:commandButton>
+        </h:panelGrid>
+        <h:outputText value="Id Student"></h:outputText>
+        <h:inputText value="#{formStudent.studentDetails.id}"></h:inputText>
+        <h:outputText value="Student Name"></h:outputText>
+        <h:inputText value="#{formStudent.studentDetails.name}"></h:inputText>
+        <h:outputText value="Matricol"></h:outputText>
+        <h:inputText value="#{formStudent.studentDetails.universityId}"></h:inputText>
+        <h:outputText value="Address Student"></h:outputText>
+        <h:inputText value="#{formStudent.studentDetails.address}"></h:inputText>
+        <h:outputText value="Max Allow Books"></h:outputText>
+        <h:inputText value="#{formStudent.studentDetails.maxBookAllow}"></h:inputText>
+        <h:outputText value="Status Student"></h:outputText>
+        <h:inputText value="#{formStudent.studentDetails.issuedStudent}"></h:inputText>
+    </h:panelGrid>
+    <h:panelGrid border="1" columns="4">
+        <h:commandButton value="Add student" actionListener="#{formStudent.addStudent}"></h:commandButton>
+        <h:commandButton value="Save Student" actionListener="#{formStudent.saveStudent}"></h:commandButton>
+        <h:commandButton value="Abandon Student" actionListener="#{formStudent.abandonStudent}"></h:commandButton>
+        <h:commandButton value="Delete Student" actionListener="#{formStudent.deleteStudent}"></h:commandButton>
+    </h:panelGrid>
+</h:form>
+</body>
+</html>
